@@ -223,7 +223,30 @@ body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--w
 }
 .kontak-form h3 { font-size: 20px; font-weight: 700; margin-bottom: 24px; }
 
-/* ── FOOTER ── */
+/* ── KONTAK WA BOX ── */
+.kontak-wa-box {
+  background: var(--gray); border-radius: var(--radius);
+  padding: 36px 32px; box-shadow: var(--shadow); text-align: center;
+}
+.wa-box-icon { font-size: 48px; margin-bottom: 12px; }
+.kontak-wa-box h3 { font-size: 22px; font-weight: 800; margin-bottom: 10px; }
+.kontak-wa-box > p { color: var(--text-light); font-size: 14px; line-height: 1.6; margin-bottom: 24px; }
+.wa-quick-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
+.wa-quick-btn {
+  background: white; border: 2px solid #e0e0e0; border-radius: 10px;
+  padding: 12px 10px; font-size: 13px; font-weight: 600; color: var(--text);
+  text-decoration: none; transition: all .2s;
+}
+.wa-quick-btn:hover { border-color: #25d366; color: #25d366; background: #f0fff5; }
+.btn-wa-main {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  background: #25d366; color: white; padding: 14px 24px;
+  border-radius: 50px; font-size: 16px; font-weight: 700;
+  text-decoration: none; transition: all .2s;
+  box-shadow: 0 4px 16px rgba(37,211,102,.4);
+}
+.btn-wa-main img { width: 22px; height: 22px; filter: brightness(0) invert(1); }
+.btn-wa-main:hover { background: #1da851; transform: translateY(-2px); box-shadow: 0 6px 24px rgba(37,211,102,.5); }
 .footer { background: var(--blue-dark); color: white; padding: 60px 0 0; }
 .footer-inner { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; padding-bottom: 40px; }
 .footer-brand .logo-text { font-size: 24px; font-weight: 900; letter-spacing: 2px; }

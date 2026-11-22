@@ -43,7 +43,7 @@ function hitungCicilan() {
   const harga = parseInt(document.getElementById('hargaMotor').value);
   const dp = parseInt(document.getElementById('dpPersen').value) / 100;
   const tenor = parseInt(document.getElementById('tenor').value);
-  const bunga = 0.015; // 1.5% per tahun flat
+  const bunga = 0.015;
 
   const pinjaman = harga * (1 - dp);
   const bungaTotal = pinjaman * bunga * tenor;
@@ -53,28 +53,11 @@ function hitungCicilan() {
   document.getElementById('nilaiCicilan').textContent = formatted + ' / bln';
 }
 
-// Hitung otomatis saat halaman load
 hitungCicilan();
 
-// Hitung otomatis saat input berubah
 ['hargaMotor', 'dpPersen', 'tenor'].forEach(id => {
   document.getElementById(id).addEventListener('change', hitungCicilan);
 });
-
-// Form submit → redirect ke WhatsApp
-function submitForm(e) {
-  e.preventDefault();
-  const form = e.target;
-  const nama = form.querySelector('input[type="text"]').value;
-  const wa = form.querySelector('input[type="tel"]').value;
-  const motor = form.querySelector('select').value;
-  const pesan = form.querySelector('textarea').value;
-
-  const text = encodeURIComponent(
-    `Halo Marta Yamaha Sentral! 👋\n\nNama: ${nama}\nNo. WA: ${wa}\nMotor Diminati: ${motor}\n${pesan ? 'Pesan: ' + pesan : ''}\n\nMohon info lebih lanjut ya. Terima kasih!`
-  );
-  window.open(`https://wa.me/6289508739806?text=${text}`, '_blank');
-}
 
 // Smooth reveal on scroll
 const observer = new IntersectionObserver((entries) => {
