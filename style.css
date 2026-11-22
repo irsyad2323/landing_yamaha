@@ -100,16 +100,6 @@ body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--w
 .section-header.light h2 { color: var(--white); }
 .section-header.light p { color: rgba(255,255,255,.7); }
 
-/* ── FILTER PRODUK ── */
-.produk-filter { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 32px; justify-content: center; }
-.filter-btn {
-  padding: 8px 20px; border-radius: 50px; border: 2px solid #ddd;
-  background: white; font-size: 13px; font-weight: 600; cursor: pointer;
-  transition: all .2s; color: var(--text-light);
-}
-.filter-btn:hover, .filter-btn.active { background: var(--blue); color: white; border-color: var(--blue); }
-
-/* ── PRODUK ── */
 .produk { padding: 80px 0; background: var(--gray); }
 .produk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .produk-card {
