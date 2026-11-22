@@ -325,14 +325,47 @@ body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--w
   .produk-grid { grid-template-columns: repeat(2, 1fr); }
   .promo-grid { grid-template-columns: 1fr; }
   .kredit-inner, .kontak-inner { grid-template-columns: 1fr; gap: 40px; }
-  .testi-grid { grid-template-columns: 1fr; }
+  .testi-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-inner { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 600px) {
   .nav-links, .btn-nav { display: none; }
   .hamburger { display: block; margin-left: auto; }
-  .keunggulan-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .hero-content { padding: 100px 20px 60px; }
+  .hero-desc { font-size: 15px; }
+  .hero-cta { flex-direction: column; }
+  .hero-cta .btn-primary, .hero-cta .btn-outline { text-align: center; }
+
+  .keunggulan { padding: 40px 0; }
+  .keunggulan-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .keung-item { padding: 20px 12px; }
+
+  .produk { padding: 50px 0; }
   .produk-grid { grid-template-columns: 1fr; }
-  .footer-inner { grid-template-columns: 1fr; }
-  .wa-popup { width: 280px; }
+  .produk-filter { gap: 8px; }
+  .filter-btn { padding: 6px 14px; font-size: 12px; }
+
+  .promo { padding: 50px 0; }
+
+  .kredit { padding: 50px 0; }
+  .kredit-text h2 { font-size: 26px; }
+  .kredit-form { padding: 24px 16px; }
+  .hasil-cicilan h2 { font-size: 22px; }
+
+  .testimoni { padding: 50px 0; }
+  .testi-grid { grid-template-columns: 1fr; }
+
+  .kontak { padding: 50px 0; }
+  .kontak-text h2 { font-size: 26px; }
+  .kontak-wa-box { padding: 24px 16px; }
+  .wa-quick-btns { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .wa-quick-btn { font-size: 12px; padding: 10px 8px; }
+
+  .footer-inner { grid-template-columns: 1fr; gap: 24px; }
+  .footer { padding: 40px 0 0; }
+
+  .wa-bubble { bottom: 16px; right: 16px; }
+  .wa-popup { width: calc(100vw - 32px); right: 0; }
+  .wa-btn { width: 54px; height: 54px; }
 }
